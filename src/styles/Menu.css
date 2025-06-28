@@ -1,0 +1,184 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .manohara-wellness-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 45px 20px;
+  }
+  
+  .wellness-header {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .wellness-header h1 {
+    color: #2C3E50;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .wellness-header p {
+    color: #34495E;
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  
+  .wellness-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .wellness-menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* .wellness-menu-item:hover {
+    transform: scale(1.05);
+  } */
+  
+  .menu-item-icon {
+    width: 100px;
+    height: 65px;
+    /* margin-bottom: 20px; */
+  }
+  
+  .brain-icon {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .wellness-menu-item h2 {
+    margin-bottom: 15px;
+    color: #2C3E50;
+    font-size: 1.3rem;
+  }
+  
+  .wellness-menu-item p {
+    color: #7F8C8D;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .menu-action-button {
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-action-button:hover {
+    background-color: #2980B9;
+  }
+  
+  /* Background Color Classes */
+  .bg-peach { background-color: #FAE5D3; }
+  .bg-mint { background-color: #E0F2F1; }
+  .bg-lavender { background-color: #F3E5F5; }
+  .bg-lightblue { background-color: #E3F2FD; }
+  .bg-pink { background-color: #FCE4EC; }
+  .bg-white { background-color: #FFFFFF; }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .wellness-menu-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .wellness-menu-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .wellness-header h1 {
+      font-size: 2rem;
+    }
+  }
+
+
+  .sticker-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .sticker-popup {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    animation: popIn 0.3s ease-out;
+  }
+  
+  @keyframes popIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .sticker-popup h2 {
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .sticker-popup p {
+    color: #666;
+    margin-bottom: 16px;
+  }
+  
+  .sticker-image {
+    margin: 16px 0;
+  }
+  
+  .sticker-image img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+  }
+  
+  .sticker-add-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .sticker-add-button:hover {
+    background-color: #3a7cd5;
+  }

@@ -1,0 +1,202 @@
+.community-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 90px;
+}
+
+.community-content {
+  width: 1200px;
+  max-width: 1200px;
+  position: relative;
+}
+
+.community-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.comments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 30px;
+}
+
+.comment-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.comment-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-user-info strong {
+  font-size: 1rem;
+  color: #333;
+}
+
+.comment-time {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.comment-card-text {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.comment-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.like-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.like-button.liked {
+  background-color: #e6f2ff;
+  color: #007bff;
+}
+
+.like-button svg {
+  stroke: currentColor;
+}
+
+.delete-icon {
+  background: none;
+  border: none;
+  color: #d32f2f;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-icon:hover {
+  background-color: #fff0f0;
+}
+
+.new-post-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  width: 120px;
+  height: 56px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.new-post-button:hover {
+  background-color: #0056b3;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-textarea {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.modal-actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.discard-button,
+.post-button,
+.delete-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.discard-button {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.post-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.delete-confirm {
+  text-align: center;
+}
+
+.delete-confirm h3 {
+  margin-bottom: 1rem;
+  color: #d32f2f;
+}
+
+.delete-button {
+  background-color: #d32f2f;
+  color: white;
+}

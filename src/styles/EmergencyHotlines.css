@@ -1,0 +1,181 @@
+/* Emergency Hotlines CSS */
+
+:root {
+    /* Color Palette */
+    --color-primary: #2F3E4F;
+    --color-background: #F5F3FB;
+    --color-white: #ffffff;
+    --color-text: #2F3E4F;
+    --color-accent: #3B92D9;
+    
+    /* Typography */
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    /* Spacing */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+/* Container Styles */
+.emergency-hotlines-container {
+    margin-top: 60px !important;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing-large);
+}
+
+/* Header Styles */
+.emergency-hotlines-header {
+    text-align: center;
+    margin-bottom: var(--spacing-large);
+}
+
+.emergency-hotlines-header h1 {
+    color: var(--color-primary);
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+/* Hotlines List */
+.hotlines-list {
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-medium);
+    margin-top: 70px;
+}
+
+/* Hotline Card */
+.hotline-card {
+    flex: 1;
+    background-color: var(--color-white);
+    border-radius: 12px;
+    padding: var(--spacing-large);
+    box-shadow: 0 4px 20px rgba(47, 62, 79, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hotline Header */
+.hotline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-medium);
+}
+
+.hotline-header h2 {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Hotline Types */
+.hotline-types {
+    display: flex;
+    gap: var(--spacing-small);
+}
+
+.hotline-type-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotline-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.hotline-icon.phone {
+    color: #3B92D9;
+}
+
+.hotline-icon.whatsapp {
+    color: #2ECC71;
+}
+
+.hotline-icon.chat {
+    color: #9B59B6;
+}
+
+/* Hotline Description */
+.hotline-description {
+    flex-grow: 1;
+    color: var(--color-text);
+    opacity: 0.7;
+    margin: var(--spacing-medium) 0;
+}
+
+/* Hotline Actions */
+.hotline-actions {
+    display: flex;
+    gap: var(--spacing-small);
+}
+
+.call-button {
+    display: inline-block;
+    background-color: #6A89A7;
+    color: var(--color-white);
+    text-decoration: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+}
+
+.call-button:hover {
+    background-color: #384959;
+}
+
+.website-link {
+    display: inline-block;
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--color-accent);
+    transition: color 0.3s ease;
+}
+
+.website-link:hover {
+    color: #2C7AB8;
+}
+
+/* Footer */
+.emergency-hotlines-footer {
+    text-align: center;
+    margin-top: var(--spacing-large);
+    color: var(--color-primary);
+    opacity: 0.6;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hotlines-list {
+        flex-direction: column;
+    }
+}
+
+/* Accessibility Enhancements */
+.call-button:focus,
+.website-link:focus {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+}

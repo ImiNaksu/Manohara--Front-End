@@ -1,0 +1,177 @@
+.react-calendar {
+    background: #BDDDFC;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 90%;
+    margin: 90px auto 30px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Ensure the days container uses grid layout properly */
+  .react-calendar__month-view__days {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+  }
+  
+  /* Individual day tiles */
+  .react-calendar__tile {
+    position: relative;
+    border: 1px solid #f0f0f0; /* Light border */
+    border-radius: 8px;
+    min-height: 100px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: white;
+    transition: all 0.2s ease;
+    /* color: black;
+    text-decoration: unset;
+    font-weight: bold; */
+  }
+  
+  /* Make non-current month tiles non-clickable and faded */
+  .react-calendar__tile.non-current-month {
+    pointer-events: none;
+    background: #f9f9f9;
+    opacity: 0.6;
+  }
+  
+  /* Date label styling */
+  .react-calendar__tile abbr {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Tile wrapper for positioning */
+  .tile-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    background-color: #88BDF2;
+  }
+  
+  /* Card container */
+  .day-card {
+    width: 100%;
+    background: white; /* Light orange background */
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    height: 80px;
+  }
+  
+  /* Table styling */
+  .day-content table {
+    width: 100%;
+    font-size: 9px;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  
+  .day-content th,
+  .day-content td {
+    padding: 2px 3px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    margin-top: 20px;
+  }
+  
+  .day-content th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 50px;
+    color: #666;
+  }
+  
+  .day-content td {
+    padding: 2px 3px;
+  }
+
+  
+  /* Hover and active states */
+  .react-calendar__tile:hover {
+    background: #f5f5f5;
+  }
+  
+  .react-calendar__tile--now .day-card {
+    background: #e6f2ff; /* Light blue for current date */
+  }
+  
+  .react-calendar__tile--active .day-card {
+    background: #e3f2fd;
+  }
+  
+  .react-calendar__tile--empty .day-card {
+    background: white;
+    box-shadow: none;
+    height: 80px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .day-content table {
+      font-size: 8px;
+    }
+  
+    .tile-wrapper {
+      padding-top: 22px;
+    }
+  
+    .day-card {
+      margin-top: 12px;
+    }
+  
+    .day-content th {
+      max-width: 30px;
+      font-size: 8px;
+    }
+  
+    .day-content td.anxiety::before,
+    .day-content td.irritability::before {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  
+  .mood-image, .power-image, .anxiety-image, .irritability-image, .sleep-image {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  .add-mood-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #f0f8ff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-mood-label span {
+    color: #4a90e2;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.add-mood-label:hover {
+    background: #e6f2ff;
+}
+  
+
